@@ -1,0 +1,41 @@
+button {
+  background-color: #4056a1;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  border: none;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.textCounter {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+output {
+  font-family: 'Bungee', sans-serif;
+  float: right;
+}
+
+::placeholder {
+  color:#545149;
+  opacity: 1;
+}
+
+#tweet-text {
+  resize: none;
+  height: 45px;
+  background-color: #f4f1ec;
+  width: 100%;
+  font-weight: 600;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-width: 4px;
+  border-color: #545149;
+  color: #545149;
+  margin-bottom: 8px;
+}
