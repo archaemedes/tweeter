@@ -1,0 +1,29 @@
+/* Styling for nav bar */
+nav {
+  height: 120px;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pageTitle {
+  margin-left: 1.5em;
+  font-family: 'Bungee', sans-serif;
+}
+
+.navButton {
+  margin-right: 1.5em;
+  display: flex;
+  align-content: center;
+}
+
+.navImage {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.boldText {
+  font-weight: 600;
+}
