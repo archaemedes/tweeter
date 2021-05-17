@@ -22,6 +22,11 @@ body {
   font-size: 24px;
 }
 
+main {
+  background-color: #f4f1ec;
+  width: 90%;
+  margin: 0 auto;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
