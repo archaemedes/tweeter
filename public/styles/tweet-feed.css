@@ -18,7 +18,7 @@
   font-size:large;
   margin-top: 10px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .tweet-date {
@@ -32,7 +32,7 @@
 }
 
 #options {
-  color: rgb(85, 68, 241);
+  color: #4056a1;
 }
 
 
