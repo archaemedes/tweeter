@@ -13,14 +13,52 @@
 .tweet-name {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: space-between;
+  font-size:large;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .tweet-date {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: small;
+}
+
+#options {
+  color: rgb(85, 68, 241);
+}
+
+
+#handle {
+  margin-right: 15px;
+  color: rgb(176, 167, 255);
+}
+
+
+#user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#flag {
+  margin: 2px;
+}
+
+#like {
+  margin: 2px;
+}
+
+#retweet {
+  margin: 2px;
 }
 
 
