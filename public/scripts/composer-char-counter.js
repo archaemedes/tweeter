@@ -1,10 +1,5 @@
 $(document).ready(() => {
-  console.log("Document is ready");
-
   const counter = document.getElementById("counter");
-
-
-
   $("#tweet-text").keyup(function(event) {
     const elementName = this.name;
     const tweetBox = $(`textarea#${elementName}`).val();
@@ -16,7 +11,6 @@ $(document).ready(() => {
     console.log(charCount);
     console.log(event.which);
   });
-
   $("#tweet-text").keydown(function(event) {
     const elementName = this.name;
     const tweetBox = $(`textarea#${elementName}`).val();
