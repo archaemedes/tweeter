@@ -2,7 +2,7 @@
   margin-left: 25px;
 }
 
-.tweet-feed {
+.post {
   margin-top: 10px;
   border: 3px solid #545149;
   display: flex;
@@ -31,47 +31,47 @@
   font-size: small;
 }
 
-#options {
+.options {
   color: #4056a1;
 }
 
 
-#handle {
+.handle {
   margin-right: 15px;
   color: rgb(176, 167, 255);
 }
 
 
-#user {
+.user {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-#flag {
+.flag {
   margin: 2px;
 }
 
-#like {
+.like {
   margin: 2px;
 }
 
-#retweet {
+.retweet {
   margin: 2px;
 }
 
 
-#avatar {
+.avatar {
   margin-left: 15px;
   height: 40px;
 }
 
-#name {
+.name {
   margin-left: 10px;
 }
 
-#border {
+.border {
   margin: 10px;
   border-top: 3px solid #545149;
 }
