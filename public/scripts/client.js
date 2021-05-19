@@ -33,18 +33,21 @@ const data = [
 
 const createTweetElement = function(tweetData) {
   const date = timeago.format(tweetData.created_at);
-  return `<article class='post'id="tweet-2">
-      <header class='tweet-name'>
-        <span class='user'><img class='avatar' src="${tweetData.user.avatars}"><p class='name'>${tweetData.user.name}</p></span><span> </span><p class='handle'>${tweetData.user.handle}</p>
-      </header>
-  <p class='tweet-content'>
-  ${tweetData.content.text}
-  </p>
-  <div class='border'></div>
-  <footer>
-    <div class='tweet-date'>
-      <span>${date}</span><span> </span><span class='options'><i class="fas fa-flag flag"></i><i class="fas fa-retweet retweet"></i><i class="fas fa-heart like"></i></span>
-    </article>`
+
+  let $tweet = `<article class='post'id="tweet-2">
+  <header class='tweet-name'>
+    <span class='user'><img class='avatar' src="${tweetData.user.avatars}"><p class='name'>${tweetData.user.name}</p></span><span> </span><p class='handle'>${tweetData.user.handle}</p>
+  </header>
+<p class='tweet-content'>
+${tweetData.content.text}
+</p>
+<div class='border'></div>
+<footer>
+<div class='tweet-date'>
+  <span>${date}</span><span> </span><span class='options'><i class="fas fa-flag flag"></i><i class="fas fa-retweet retweet"></i><i class="fas fa-heart like"></i></span>
+</article>`;
+
+  return $tweet;
 };
 
 const renderTweets = function(tweets){
