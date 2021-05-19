@@ -4,12 +4,12 @@ A client-side Single Page App (SPA)
 Communicates with a server via AJAX
 
 ## Display Requirements
-Navigation Bar:
+[] Navigation Bar:
 
-is fixed to the top
+[*]is fixed to the top
 has padding on both sides
 contains Compose button
-Compose Tweet box:
+[*] Compose Tweet box:
 
 is displayed above the list of tweets
 contains a form for submitting tweets, which itself contains:
