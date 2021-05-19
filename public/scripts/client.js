@@ -6,7 +6,6 @@
 
 // Define the temporary object
 $( document ).ready(function() {
-  console.log( "ready!" );
 const defTweetData = {
   "user": {
     "name": "Newton",
@@ -16,8 +15,10 @@ const defTweetData = {
   "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1621216985729
+  "created_at": 1421216985729
 };
+
+const date = timeago.format(defTweetData.created_at);
 
 const createTweetElement = (tweetData) => {
   return `<article class='post'id="tweet-2">
@@ -30,13 +31,11 @@ const createTweetElement = (tweetData) => {
   <div class='border'></div>
   <footer>
     <div class='tweet-date'>
-      <span class='date'>May 10 2020</span><span> </span><span class='options'><i class="fas fa-flag flag"></i><i class="fas fa-retweet retweet"></i><i class="fas fa-heart like"></i></span>
+      <span>${date}</span><span> </span><span class='options'><i class="fas fa-flag flag"></i><i class="fas fa-retweet retweet"></i><i class="fas fa-heart like"></i></span>
     </article>`
 };
 
-const $tweet = $(createTweetElement(defTweetData));
+const tweet = $(createTweetElement(defTweetData));
 
-
-console.log($tweet); 
-$('.tweet-feed').append($tweet); 
+$('.tweet-feed').append(tweet);
 });
