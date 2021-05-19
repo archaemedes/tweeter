@@ -6,21 +6,33 @@
 
 // Define the temporary object
 $( document ).ready(function() {
-const defTweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle": "@SirIsaac"
     },
-  "content": {
+    "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1421216985729
-};
+    "created_at": 1621224137011
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd"
+    },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1621310537011
+  }
+];
 
-const date = timeago.format(defTweetData.created_at);
-
-const createTweetElement = (tweetData) => {
+const createTweetElement = function(tweetData) {
+  const date = timeago.format(tweetData.created_at);
   return `<article class='post'id="tweet-2">
       <header class='tweet-name'>
         <span class='user'><img class='avatar' src="${tweetData.user.avatars}"><p class='name'>${tweetData.user.name}</p></span><span> </span><p class='handle'>${tweetData.user.handle}</p>
@@ -35,7 +47,13 @@ const createTweetElement = (tweetData) => {
     </article>`
 };
 
-const tweet = $(createTweetElement(defTweetData));
+const renderTweets = function(tweets){
+  for (const item of tweets) {
+    const tweet = createTweetElement(item);
+    $('.tweet-feed').append(tweet);
+    console.log(tweet);
+  }
+};
 
-$('.tweet-feed').append(tweet);
+renderTweets(data);
 });
