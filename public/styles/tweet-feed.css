@@ -1,5 +1,12 @@
+
+.tweet-feed {
+  margin-bottom: 20px;
+}
+
+
 .tweet-content {
   margin-left: 25px;
+  margin-bottom: 10px;
 }
 
 .post {
