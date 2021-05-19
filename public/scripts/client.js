@@ -54,9 +54,17 @@ const renderTweets = function(tweets){
   for (const item of tweets) {
     const tweet = createTweetElement(item);
     $('.tweet-feed').append(tweet);
-    console.log(tweet);
   }
 };
+
+$('.tweet-chars').on('submit', function(event){
+  event.preventDefault();
+  const tweet = $('.tweet-chars').serialize().slice(10);
+  console.log(tweet);
+  $.ajax({url: `/tweets${tweet}`, method: 'POST'})
+  .then((result)=>{console.log(result);})
+  .catch((err)=>{console.log(err)});
+});
 
 renderTweets(data);
 });
