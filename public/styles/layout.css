@@ -28,6 +28,10 @@ main {
   margin: 0 auto;
 }
 
+#screen-name {
+  font-size: xx-large;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
