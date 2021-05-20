@@ -20,6 +20,10 @@ button {
   justify-content: space-between;
 }
 
+.tweet-error-message {
+  margin: 1.0em;
+}
+
 output {
   font-family: 'Bungee', sans-serif;
   float: right;
