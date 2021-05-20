@@ -1,13 +1,13 @@
 # Tweeter
 
-Tweeter is a SPA (Single Page Application) that features a live updated tweet feed that you can contribute to yourself! Give Tweeter a try!
+Tweeter is an SPA (Single Page Application) created by Wade Croft that features a live updated tweet feed that you can contribute to yourself! Give Tweeter a try!
 
 # Features
 
-[*] Fully functional Tweeter feed
-[*] Posting funcionality
-[*] Hover effects
-[*] Convienient feed scroll
+[] Fully functional Tweeter feed
+[] Posting funcionality
+[] Hover effects
+[] Convienient feed scroll
 
 ## Final Product
 !["Screenshot of welcome page](https://github.com/archaemedes/tinyapp/blob/master/docs/welcome-page.png?raw=true)
