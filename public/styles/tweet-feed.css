@@ -1,15 +1,16 @@
 .container {
-  margin-top: 480px;
+  margin-top: 50vh;
 }
 .tweet-feed {
   margin-bottom: 20px;
 }
 
-
 .tweet-content {
   margin-left: 25px;
   margin-right: 25px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-size: large;
 }
 
 .post {
@@ -27,7 +28,7 @@
   justify-content: space-between;
   align-items: space-between;
   font-size:large;
-  margin-top: 10px;
+  margin-top: 8px;
   margin-left: 10px;
   margin-right: 20px;
 }
@@ -74,7 +75,7 @@
 
 
 .avatar {
-  margin-left: 15px;
+  margin-left: 10px;
   height: 40px;
 }
 
@@ -84,5 +85,5 @@
 
 .border {
   margin: 10px;
-  border-top: 3px solid #545149;
+  border-top: 2px solid #545149;
 }

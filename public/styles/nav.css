@@ -1,18 +1,19 @@
 /* Styling for nav bar */
 nav {
   z-index: 2;
-  height: 120px;
+  height: 18vh;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  font-size: large;
   top: 0;
   width: 100%;
 }
 
 .pageTitle {
-  margin-left: 1.5em;
+  margin-left: 2em;
   font-family: "Bungee", sans-serif;
   font-size: larger;
 }

@@ -1,5 +1,5 @@
 .profile-header {
-  height: 450px;
+  height: 45vh;
   width: 100%;
   background-color: #f8a175;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+#profile-pic {
+  height: 20vh;
+}
+
 .profile-display {
-  margin-top: 100px;
+  margin-top: 14vh;
 }
