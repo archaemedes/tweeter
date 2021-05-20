@@ -141,11 +141,9 @@ $('.tweet-chars').on('submit', function(event){
   const tweet = `${$('.tweet-chars').serialize().slice(11)}`;
   console.log(tweet);
   if (tweet.length > 140) {
-    alert('Error: Tweet was too long');
     renderError('Error: Tweet was too long');
   };
   if (tweet.length === 0) {
-    alert("Error: Tweet was 0 characters long");
     renderError('Error: Tweet was 0 characters long');
   };
   if (tweet.length <= 140 && tweet.length !== 0) {
@@ -153,7 +151,6 @@ $('.tweet-chars').on('submit', function(event){
     $('.tweet-error').css("all","unset");
   $.ajax({url: `/tweets/`, data: `text=${tweet}`, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
   .then((result)=>{
-    console.log('tweet success');
     loadTweets();
   })
   .catch((err)=>{console.log(err)});
