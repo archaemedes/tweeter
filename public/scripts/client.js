@@ -59,6 +59,13 @@ $( document ).ready(function() {
     }
     ];
 
+  // Escape function to make string literals safe
+  const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
   const renderTweets = function(tweets){
     let tweetID = 1;
     for (const item of tweets) {
@@ -78,13 +85,13 @@ $( document ).ready(function() {
   };
 
 const createTweetElement = function(tweetData, tweetID) {
-  const date = timeago.format(tweetData.created_at);
-  let $tweet = `<article class='post'id="tweet-${tweetID}">
+  const date = timeago.format(escape(tweetData.created_at));
+  let $tweet = `<article class='post'id="tweet-${escape(tweetID)}">
   <header class='tweet-name'>
-    <span class='user'><img class='avatar' src="${tweetData.user.avatars}"><p class='name'>${tweetData.user.name}</p></span><span> </span><p class='handle'>${tweetData.user.handle}</p>
+    <span class='user'><img class='avatar' src="${escape(tweetData.user.avatars)}"><p class='name'>${escape(tweetData.user.name)}</p></span><span> </span><p class='handle'>${escape(tweetData.user.handle)}</p>
   </header>
 <p class='tweet-content'>
-${tweetData.content.text}
+${escape(tweetData.content.text)}
 </p>
 <div class='border'></div>
 <footer>
