@@ -6,6 +6,11 @@ $(document).ready(() => {
     const elementName = this.name;
     const tweetBox = $(`textarea#${elementName}`).val();
     const charCount = 140 - tweetBox.length;
+    if (charCount < 0) {
+      counter.style.color = "red";
+    } else {
+      counter.style.color = "#545149";
+    };
     counter.innerHTML = charCount;
     console.log(charCount);
     console.log(event.which);
