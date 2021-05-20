@@ -50,6 +50,15 @@ ${tweetData.content.text}
   return $tweet;
 };
 
+const loadTweets = function(){
+  $.ajax('/tweets', {type: 'GET'})
+  .then(function(tweetArray){
+    renderTweets(tweetArray);
+  });
+};
+
+loadTweets();
+
 const renderTweets = function(tweets){
   for (const item of tweets) {
     const tweet = createTweetElement(item);
@@ -65,6 +74,4 @@ $('.tweet-chars').on('submit', function(event){
   .then((result)=>{console.log(result);})
   .catch((err)=>{console.log(err)});
 });
-
-renderTweets(data);
 });
