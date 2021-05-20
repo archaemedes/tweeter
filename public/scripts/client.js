@@ -59,9 +59,9 @@ const renderTweets = function(tweets){
 
 $('.tweet-chars').on('submit', function(event){
   event.preventDefault();
-  const tweet = $('.tweet-chars').serialize().slice(10);
+  const tweet = `text${$('.tweet-chars').serialize().slice(10)}`;
   console.log(tweet);
-  $.ajax({url: `/tweets${tweet}`, method: 'POST'})
+  $.ajax({url: `/tweets/`, data: tweet, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
   .then((result)=>{console.log(result);})
   .catch((err)=>{console.log(err)});
 });
