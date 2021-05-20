@@ -79,7 +79,7 @@ $( document ).ready(function() {
   const renderError = function(errorMSG){
     const error = createErrorElement(errorMSG);
     $('.tweet-error').empty();
-    $('.tweet-error').append(error);
+    $('.tweet-error').html(error);
     $('.tweet-error').addClass('tweet-error-active');
   };
 
@@ -94,10 +94,11 @@ $( document ).ready(function() {
 
 const createTweetElement = function(tweetData, tweetID) {
   const date = timeago.format(escape(tweetData.created_at));
+  const handle = tweetData.user.handle.replace(/\s+/g, '')
   let $tweet = 
     `<article class='post'id="tweet-${escape(tweetID)}">
     <header class='tweet-name'>
-    <span class='user'><img class='avatar' src="${escape(tweetData.user.avatars)}"><p class='name'>${escape(tweetData.user.name)}</p></span><span> </span><p class='handle'>${escape(tweetData.user.handle)}</p>
+    <span class='user'><img class='avatar' src="${escape(tweetData.user.avatars)}"><p class='name'>${escape(tweetData.user.name)}</p></span><span> </span><p class='handle'>${escape(handle)}</p>
     </header>
     <p class='tweet-content'>
     ${escape(tweetData.content.text)}
