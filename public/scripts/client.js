@@ -76,7 +76,25 @@ $( document ).ready(function() {
     }
   };
 
-
+  const renderError = function(errorMSG){
+    const error = createErrorElement(errorMSG);
+    $('.tweet-error').empty();
+    $('.tweet-error').append(error);
+    $('.tweet-error').css({
+      "all":"",
+      "width": "80%",
+      "display": "flex",
+      "flex-direction": "row",
+      "justify-content": "center",
+      "align-items": "center",
+      "color": "rgb(129, 1, 1)",
+      "border-style": "solid",
+      "border-width": "3px",
+      "border-color": "rgb(129, 1, 1)",
+      "margin": "auto",
+      "margin-bottom": "1.0em"
+    });
+  };
 
   const loadTweets = function(){
     $.ajax('/tweets', {type: 'GET'})
@@ -89,20 +107,29 @@ $( document ).ready(function() {
 
 const createTweetElement = function(tweetData, tweetID) {
   const date = timeago.format(escape(tweetData.created_at));
-  let $tweet = `<article class='post'id="tweet-${escape(tweetID)}">
-  <header class='tweet-name'>
+  let $tweet = 
+    `<article class='post'id="tweet-${escape(tweetID)}">
+    <header class='tweet-name'>
     <span class='user'><img class='avatar' src="${escape(tweetData.user.avatars)}"><p class='name'>${escape(tweetData.user.name)}</p></span><span> </span><p class='handle'>${escape(tweetData.user.handle)}</p>
-  </header>
-<p class='tweet-content'>
-${escape(tweetData.content.text)}
-</p>
-<div class='border'></div>
-<footer>
-<div class='tweet-date'>
-  <span>${date}</span><span> </span><span class='options'><i class="fas fa-flag flag"></i><i class="fas fa-retweet retweet"></i><i class="fas fa-heart like"></i></span>
-</article>`;
+    </header>
+    <p class='tweet-content'>
+    ${escape(tweetData.content.text)}
+    </p>
+    <div class='border'></div>
+    <footer>
+    <div class='tweet-date'>
+    <span>${date}</span><span> </span><span class='options'><i class="fas fa-flag flag"></i><i class="fas fa-retweet retweet"></i><i class="fas fa-heart like"></i></span>
+  </article>`;
 
   return $tweet;
+};
+
+const createErrorElement = function(error){
+  let $error = 
+   `<i class="fas fa-exclamation-triangle"></i>
+    <p class='tweet-error-message'>${error}</p>
+    <i class="fas fa-exclamation-triangle"></i>`
+  return $error;
 };
 
 
@@ -114,12 +141,16 @@ $('.tweet-chars').on('submit', function(event){
   const tweet = `${$('.tweet-chars').serialize().slice(11)}`;
   console.log(tweet);
   if (tweet.length > 140) {
-    alert('Error: Tweet was too long')
+    alert('Error: Tweet was too long');
+    renderError('Error: Tweet was too long');
   };
   if (tweet.length === 0) {
-    alert("Error: Tweet was 0 characters long")
+    alert("Error: Tweet was 0 characters long");
+    renderError('Error: Tweet was 0 characters long');
   };
-  if (tweet.length <= 140) {
+  if (tweet.length <= 140 && tweet.length !== 0) {
+    $('.tweet-error').empty();
+    $('.tweet-error').css("all","unset");
   $.ajax({url: `/tweets/`, data: `text=${tweet}`, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
   .then((result)=>{
     console.log('tweet success');
