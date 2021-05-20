@@ -64,7 +64,7 @@ $( document ).ready(function() {
     for (const item of tweets) {
       const tweet = createTweetElement(item, tweetID);
       tweetID = tweetID + 1;
-      $('.tweet-feed').append(tweet);
+      $('.tweet-feed').prepend(tweet);
     }
   };
 
@@ -98,12 +98,21 @@ ${tweetData.content.text}
 
 loadTweets();
 
+// Create new tweet via POST
 $('.tweet-chars').on('submit', function(event){
   event.preventDefault();
-  const tweet = `text${$('.tweet-chars').serialize().slice(10)}`;
+  const tweet = `${$('.tweet-chars').serialize().slice(11)}`;
   console.log(tweet);
-  $.ajax({url: `/tweets/`, data: tweet, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
+  if (tweet.length > 140) {
+    alert('Error: Tweet was too long')
+  };
+  if (tweet.length === 0) {
+    alert("Error: Tweet was 0 characters long")
+  };
+  if (tweet) {
+  $.ajax({url: `/tweets/`, data: `text=${tweet}`, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
   .then((result)=>{console.log(result);})
   .catch((err)=>{console.log(err)});
+  };
 });
 });
