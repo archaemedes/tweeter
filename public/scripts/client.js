@@ -55,34 +55,9 @@ $(document).ready(function () {
     $(".date").html(timeago.format(1621204295892));
   };
 
-  $('.navImage').on('click', function(){
+  $('.navButton').on('click', function(){
     $('#tweet-text').focus();
   });
-
-  const testData = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1621301723252,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1621388123252,
-    },
-  ];
 
   // Escape function to make string literals safe
   const escape = function (str) {
@@ -130,7 +105,9 @@ $(document).ready(function () {
     )}</p></span><span> </span><p class='handle'>${escape(handle)}</p>
     </header>
     <p class='tweet-content'>
+    <strong>
     ${escape(tweetData.content.text)}
+    </strong>
     </p>
     <div class='border'></div>
     <footer>
