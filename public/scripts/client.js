@@ -67,6 +67,7 @@ $( document ).ready(function() {
     };
 
   const renderTweets = function(tweets){
+    $(".tweet-feed").empty();
     let tweetID = 1;
     for (const item of tweets) {
       const tweet = createTweetElement(item, tweetID);
@@ -74,6 +75,8 @@ $( document ).ready(function() {
       $('.tweet-feed').prepend(tweet);
     }
   };
+
+
 
   const loadTweets = function(){
     $.ajax('/tweets', {type: 'GET'})
