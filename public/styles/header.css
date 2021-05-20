@@ -1,3 +1,4 @@
+/* Styling for profile view area */
 .profile-header {
   height: 45vh;
   width: 100%;
@@ -12,10 +13,16 @@
   align-items: center;
 }
 
+.profile-display {
+  margin-top: 14vh;
+}
+
 #profile-pic {
   height: 20vh;
 }
 
-.profile-display {
-  margin-top: 14vh;
+#screen-name {
+  font-size: x-large;
+  color: #f4f1ec;
+  margin-top: 0.5em;
 }

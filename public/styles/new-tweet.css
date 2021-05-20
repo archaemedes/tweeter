@@ -1,10 +1,4 @@
-.new-tweet {
-  margin: auto;
-  margin-top: 2.0em;
-  margin-bottom: 2.0em;
-  width: 95%;
-}
-
+/* Styling for tweet compose area */
 button {
   background-color: #4056a1;
   font-family: 'Bungee', sans-serif;
@@ -14,6 +8,18 @@ button {
   padding: 4px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+output {
+  font-family: 'Bungee', sans-serif;
+  float: right;
+}
+
+.new-tweet {
+  margin: auto;
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  width: 95%;
 }
 
 .textCounter {
@@ -42,16 +48,6 @@ button {
   margin-bottom: 1.0em;
 }
 
-output {
-  font-family: 'Bungee', sans-serif;
-  float: right;
-}
-
-::placeholder {
-  color:#545149;
-  opacity: 1;
-}
-
 #tweet-text {
   resize: none;
   height: 30px;
@@ -70,4 +66,9 @@ output {
 
 #counter {
   font-size: large;
+}
+
+::placeholder {
+  color:#545149;
+  opacity: 1;
 }
