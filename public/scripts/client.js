@@ -80,20 +80,7 @@ $( document ).ready(function() {
     const error = createErrorElement(errorMSG);
     $('.tweet-error').empty();
     $('.tweet-error').append(error);
-    $('.tweet-error').css({
-      "all":"",
-      "width": "80%",
-      "display": "flex",
-      "flex-direction": "row",
-      "justify-content": "center",
-      "align-items": "center",
-      "color": "rgb(129, 1, 1)",
-      "border-style": "solid",
-      "border-width": "3px",
-      "border-color": "rgb(129, 1, 1)",
-      "margin": "auto",
-      "margin-bottom": "1.0em"
-    });
+    $('.tweet-error').addClass('tweet-error-active');
   };
 
   const loadTweets = function(){
@@ -148,7 +135,7 @@ $('.tweet-chars').on('submit', function(event){
   };
   if (tweet.length <= 140 && tweet.length !== 0) {
     $('.tweet-error').empty();
-    $('.tweet-error').css("all","unset");
+    $('.tweet-error').removeClass('tweet-error-active');
   $.ajax({url: `/tweets/`, data: `text=${tweet}`, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
   .then((result)=>{
     loadTweets();
