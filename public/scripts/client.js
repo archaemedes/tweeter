@@ -79,8 +79,8 @@ $( document ).ready(function() {
   const renderError = function(errorMSG){
     const error = createErrorElement(errorMSG);
     $('.tweet-error').empty();
-    $('.tweet-error').html(error);
     $('.tweet-error').addClass('tweet-error-active');
+    $('.tweet-error').html(error).hide().slideDown("slow");
   };
 
   const loadTweets = function(){
