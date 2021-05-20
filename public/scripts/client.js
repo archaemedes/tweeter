@@ -109,7 +109,7 @@ $('.tweet-chars').on('submit', function(event){
   if (tweet.length === 0) {
     alert("Error: Tweet was 0 characters long")
   };
-  if (tweet) {
+  if (tweet.length <= 140) {
   $.ajax({url: `/tweets/`, data: `text=${tweet}`, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
   .then((result)=>{console.log(result);})
   .catch((err)=>{console.log(err)});
