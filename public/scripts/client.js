@@ -111,7 +111,10 @@ $('.tweet-chars').on('submit', function(event){
   };
   if (tweet.length <= 140) {
   $.ajax({url: `/tweets/`, data: `text=${tweet}`, type: 'POST', contentType: 'application/x-www-form-urlencoded; charset=UTF-8'})
-  .then((result)=>{console.log(result);})
+  .then((result)=>{
+    console.log('tweet success');
+    loadTweets();
+  })
   .catch((err)=>{console.log(err)});
   };
 });
