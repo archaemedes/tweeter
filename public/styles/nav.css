@@ -1,6 +1,5 @@
 /* Styling for nav bar */
 nav {
-  position: relative;
   z-index: 2;
   height: 120px;
   color: #ffffff;

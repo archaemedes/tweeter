@@ -1,8 +1,10 @@
 .profile-header {
   height: 450px;
+  width: 100%;
   background-color: #f8a175;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-  position: relative;
+  position: fixed;
+  top:0;
   z-index: 1;
   display: flex;
   flex-direction: column;
