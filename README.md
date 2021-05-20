@@ -4,16 +4,16 @@ Tweeter is an SPA (Single Page Application) created by Wade Croft that features 
 
 # Features
 
-[] Fully functional Tweeter feed
-[] Posting funcionality
-[] Hover effects
-[] Convienient feed scroll
+* Fully functional Tweeter feed
+* Posting funcionality
+* Hover effects
+* Convienient feed scroll
 
 ## Final Product
-!["Screenshot of welcome page](https://github.com/archaemedes/tinyapp/blob/master/docs/welcome-page.png?raw=true)
+!["Screenshot 1"](https://github.com/archaemedes/tweeter/blob/master/docs/Tweeter%20Screenshot%20%231.png?raw=true)
 
-!["Screenshot of register page"](https://github.com/archaemedes/tinyapp/blob/master/docs/register-page.png?raw=true)
-!["Screenshot of URLs page"](https://github.com/archaemedes/tinyapp/blob/master/docs/urls-page.png?raw=true)
+!["Screenshot 2"](https://github.com/archaemedes/tweeter/blob/master/docs/Tweeter%20Screenshot%20%232.png?raw=true)
+!["Screenshot 3"](https://github.com/archaemedes/tweeter/blob/master/docs/Tweeter%20Screenshot%20%233.png?raw=true)
 
 ## Getting Started
 CD into the tweeter directory and install **nodejs** and the Javascript dependencies
