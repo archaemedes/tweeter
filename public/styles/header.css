@@ -1,6 +1,6 @@
 /* Styling for profile view area */
 .profile-header {
-  height: 45vh;
+  height: 250px;
   width: 100%;
   background-color: #f8a175;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
@@ -14,11 +14,11 @@
 }
 
 .profile-display {
-  margin-top: 14vh;
+  margin-top: 55px;
 }
 
 #profile-pic {
-  height: 20vh;
+  height: 120px;
 }
 
 #screen-name {

@@ -1,7 +1,7 @@
 /* Styling for nav bar */
 nav {
   z-index: 2;
-  height: 18vh;
+  height: 80px;
   color: #ffffff;
   display: flex;
   align-items: center;
