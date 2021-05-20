@@ -5,12 +5,16 @@
   margin-bottom: 20px;
 }
 
+.name {
+  font-size: medium;
+}
+
 .tweet-content {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 8px;
-  margin-bottom: 0px;
-  font-size: large;
+  margin-bottom: 3px;
+  font-size: medium;
 }
 
 .post {
@@ -31,6 +35,7 @@
   margin-top: 8px;
   margin-left: 10px;
   margin-right: 20px;
+  font-size: medium;
 }
 
 .tweet-date {
@@ -47,12 +52,14 @@
   color: #4056a1;
 }
 
+.name {
+  margin-left: 0.8em;
+}
 
 .handle {
   margin-right: 15px;
   color: rgb(176, 167, 255);
 }
-
 
 .user {
   display: flex;
@@ -73,14 +80,9 @@
   margin: 2px;
 }
 
-
 .avatar {
   margin-left: 10px;
-  height: 40px;
-}
-
-.name {
-  margin-left: 10px;
+  height: 35px;
 }
 
 .border {
