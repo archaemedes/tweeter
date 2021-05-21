@@ -1,4 +1,13 @@
 /* Styling for nav bar */
+
+/* Desktop View */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056a1;
+  }
+}
+
+
 nav {
   z-index: 2;
   height: 80px;
@@ -19,7 +28,7 @@ nav {
 }
 
 .navButton {
-  margin-right: 1.5em;
+  margin-right: 2.5em;
   display: flex;
   align-content: center;
 }

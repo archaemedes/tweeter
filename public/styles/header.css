@@ -13,6 +13,25 @@
   align-items: center;
 }
 
+@media only screen and (min-width: 1024px) {
+  .profile-header {
+    position:inherit;
+    width: 40%;
+    margin-top: 180px;
+    margin-right: 20vw;
+    margin-left: 10vw;
+  }
+  
+  
+  .left-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+}
+
 .profile-display {
   margin-top: 55px;
 }
@@ -26,3 +45,4 @@
   color: #f4f1ec;
   margin-top: 0.5em;
 }
+
