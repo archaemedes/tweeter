@@ -159,6 +159,7 @@ $(document).ready(function() {
       })
         .then((result) => {
           $("#tweet-text").val("");
+          $('#counter').val('140');
           loadTweets();
         })
         .catch((err) => {
