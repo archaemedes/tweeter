@@ -12,6 +12,8 @@ Tweeter is an SPA (Single Page Application) created by Wade Croft that features 
 ## Final Product
 !["Screenshot 1"](https://github.com/archaemedes/tweeter/blob/master/docs/Tweeter%20Screenshot%20%231.png?raw=true)
 
+!["Desktop Layout"](https://github.com/archaemedes/tweeter/blob/master/docs/Tweeter%20-%20Desktop%20Screenshot%20%231.png?raw=true)
+
 ## Getting Started
 CD into the tweeter directory and install **nodejs** and the Javascript dependencies
 
